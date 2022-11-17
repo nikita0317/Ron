@@ -78,9 +78,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         gap: '30px',
         alignItems: 'center',
         textAlign: 'center',
-        '& .MuiLink-root': {
-            color: 'white !important'
-        }
     }
 }));
 
@@ -156,7 +153,7 @@ const Home = () => {
                 Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b> activities...
               </Typography>
               <Box>
-                <Link href="#" underline="always">
+                <Link href="#" underline="always" sx={{ color: 'black', textDecorationColor: 'black' }}>
                     Tell me more
                 </Link>
               </Box>
@@ -220,7 +217,10 @@ const Home = () => {
             <Button sx={{mt: 3}}>Start Earning TreatCoins</Button>
         </Box>
         <Box className={classes.aboutContainer} id='about'>
-            <Typography variant='h3'>
+            <Typography 
+              variant='h3'
+              fontSize={55}
+            >
                 How Does it Work?
             </Typography>
             <Box className={classes.step}>
@@ -246,7 +246,12 @@ const Home = () => {
             <Button>Join TreatCoin</Button>
         </Box>
         <Box className={classes.prizeContainer}>
-            <Typography variant='h3'>Prizes of May 2022</Typography>
+            <Typography
+              variant='h3'
+              fontSize={55}
+            >
+              Prizes of May 2022
+            </Typography>
             <Box
                 sx={{
                     width: '100%',
@@ -291,6 +296,7 @@ const Home = () => {
                                 webkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
                                 textFillColor: 'transparent',
+                                WebkitTextStroke: '1px #F5CAFA'
                             }}
                         >
                             10K USD
@@ -350,7 +356,14 @@ const Home = () => {
                         gap: '20px'
                     }}
                 >
-                    <Typography variant='h4' color='white' sx={{ mt: 3 }}>May's Leaderboards</Typography>
+                    <Typography
+                      sx={{ mt: 3 }}
+                      variant='h4'
+                      color='white'
+                      fontSize={44}
+                    >
+                        May's Leaderboards
+                    </Typography>
                     <Box 
                         sx={{
                             display: 'flex'
@@ -457,7 +470,12 @@ const Home = () => {
                 <Typography color='white' sx={{fontSize: '12px', fontStyle: 'italic', p: 2}}>*Awards are delivered in money according to the sum shown next to it and in any way you choose to redeem it via Plum: cash, gift card, or a prepaid credit card (depending on what's available via Plum in your country and your voucher's sum).</Typography>
             </Box>
             <Box className={classes.offerContainer}>
-                <Typography variant='h3'>Gain Treat Coins by completing fun offers</Typography>
+                <Typography
+                  variant='h3'
+                  fontSize={39}
+                >
+                  Gain Treat Coins by completing fun offers
+                </Typography>
                 <Box sx={{textAlign: 'left'}}>
                     <img src='images/logos/lmlive.png'/>
                     <Typography color='white' sx={{mt: '10px'}}>Adult webcam platform</Typography>
@@ -473,7 +491,14 @@ const Home = () => {
                     <Typography color='white' sx={{mt: '10px'}}>Sexy lingerie boutique</Typography>
                     <img src='images/offers/none.png' style={{ marginTop: '20px', width: '100%', borderRadius: '20px'}}/>
                 </Box>
-                <Link>See all offers</Link>
+                <Link 
+                  sx={{ 
+                    color: 'white', 
+                    textDecorationColor: 'white'
+                  }}
+                >
+                    See all offers
+                  </Link>
                 <Button sx={{width: 'fit-content', my: '30px'}}>Join TreatCoin</Button>
             </Box>
             <Footer/>

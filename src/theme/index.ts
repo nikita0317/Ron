@@ -22,14 +22,6 @@ const theme = createTheme({
         }
     },
     components: {
-        MuiLink: {
-            styleOverrides: {
-                root: {
-                    'color' : 'black',
-                    'text-decoration-color': 'black'
-                }
-            }
-        },
         MuiButton: {
             styleOverrides: {
                 root: {
