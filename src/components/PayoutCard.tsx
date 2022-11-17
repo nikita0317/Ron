@@ -43,7 +43,7 @@ const PayoutCard: FC<CardProps> = ({ content }) => {
             fontWeight={700}
             textAlign="left"
             fontSize={16}
-            mb={2}
+            mb={0.5}
           >
             {content.content}
           </Typography>

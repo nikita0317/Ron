@@ -87,7 +87,7 @@ const TreatState:FC<StateProps> = ({state}) => {
             textAlign="center"
             fontSize={16}
           >
-            TreatCoins Available to Use
+            Treat Coins Used by You
           </Typography>
           <Typography
             fontWeight="700"
@@ -114,7 +114,7 @@ const TreatState:FC<StateProps> = ({state}) => {
             textAlign="center"
             fontSize={16}
           >
-            {state.availableTitle}
+            Treat Coins Available to Use
           </Typography>
           <Typography
             fontWeight="700"
