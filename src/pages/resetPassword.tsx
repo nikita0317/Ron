@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Select,
@@ -67,15 +67,20 @@ const ResetPassword = () => {
       datetime: "05/08/2022 11:53:32 pm",
     },
   ];
-  const stateProps = {
-    date: '2022-05',
-    state: 'Total',
-    total: 155654,
-    used: 12533,
-    availableTitle: 'Competition Valid Treat Coins',
-    available: 2533
+  const [stateProps, setStateProps] = useState(
+    {
+      date: '2022-05',
+      state: 'Total',
+      total: 155654,
+      used: 12533,
+      availableTitle: 'Competition Valid Treat Coins',
+      available: 2533
+    }
+  )
 
-  }
+  useEffect(()=>{
+    setStateProps({...stateProps, date: date})
+  }, [date]);
 
   return (
     <>
