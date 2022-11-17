@@ -8,15 +8,6 @@ const theme = createTheme({
                 color: '#5FC88F'
             }
         },
-        h3: {
-            background: 'linear-gradient(15deg, #6BC6F5 3.37%, #EE94ED 50.17%, #F5BC68 83.44%, #EFCA45 110.31%)',
-            webkitBackgroundClip: 'text',
-            webkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            textFillColor: 'transparent',
-            fontSize: '44px',
-            fontWeight: '700'
-        },
         h6: {
             fontSize: '14px'
         }
@@ -30,6 +21,13 @@ const theme = createTheme({
                     borderRadius: '18px',
                     padding: '15px 30px',
                     textTransform: 'none'
+                }
+            }
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    borderRadius: '38px'
                 }
             }
         }

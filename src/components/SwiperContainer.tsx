@@ -13,7 +13,7 @@ const SwiperContainer = () => {
     return (
         <>
           <Swiper
-            slidesPerView={3}
+            slidesPerView={2}
             spaceBetween={50}
             freeMode={true}
             centeredSlides={true}

@@ -1,16 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-@font-face {
-    font-family: 'Poppins', sans-serif;
-    src: font-url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap') format('truetype');
-  }
-
-
-  
-
-body, html {
-    font-family: 'Poppins' !important;
-}
 
 .swiper-pagination-bullets {
   display: none;

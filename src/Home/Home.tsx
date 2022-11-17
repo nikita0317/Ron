@@ -1,4 +1,4 @@
-import { Box, Button, Link, Paper, Theme, Typography, Divider} from "@mui/material";
+import { Box, Button, Link, Paper, Theme, Typography, Divider, Stack} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from '@mui/icons-material/Menu';
 import Footer from "../Footer";
@@ -6,25 +6,6 @@ import CookieCard from "../components/CookieCard";
 import SwiperContainer from "../components/SwiperContainer";
 
 const useStyles = makeStyles((theme: Theme) => ({
-    logoContainer: {
-        background: `
-            url("images/Robot/1.png") left 30% top 100px no-repeat,
-            url("images/Robot/2.png") right 10% top 35px no-repeat,
-            url("images/Robot/3.png") right top 120px no-repeat,
-            url("images/Robot/4.png") right 15% top 280px no-repeat,
-            url("images/Robot/5.png") right 10% top 450px no-repeat,
-            url("images/Robot/6.png") left 15% top 450px no-repeat,
-            url("images/Robot/7.png") left 10% top 350px no-repeat,
-            url("images/Robot/8.png") left top 200px no-repeat,
-            url("images/Robot/robot.png") left 50% top 150px no-repeat,
-            linear-gradient(46.77deg, #DEF5FE 14.02%, #F9E7FF 48.07%, #FEEBE3 69.02%, #FFF1CC 91.84%)
-        `,
-        height: '800px',
-        borderRadius: '38px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between'
-    },
     treatMoneyContainer: {
         padding: '50px 20px',
         display: 'flex',
@@ -130,91 +111,89 @@ const Home = () => {
     };
     
     return (
-      <Box bgcolor='#141629'>
-        <Box className={classes.logoContainer} sx = {{ p: 2 }}>
-          <MenuIcon/>
-          <Paper 
+      <Box>
+        <Box 
+            className='join-container'
+            p={2}
+        >
+            <MenuIcon/>
+            <Paper 
             elevation={15}
             sx={{
                 px: 1,
                 py: 2,
-                borderRadius: '38px'
             }}
-          >
-            <Box 
-              display='flex'
-              flexDirection='column'
-              alignItems='center'
-              textAlign='center'
-              gap={2}
             >
-              <img src='images/Logo white.png' alt="Logo White"/>
-              <Typography>
-                Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b> activities...
-              </Typography>
-              <Box>
-                <Link href="#" underline="always" sx={{ color: 'black', textDecorationColor: 'black' }}>
+            <Box
+                className='join-card'
+                gap={2}
+            >
+                <img src='images/Logo white.png' alt="Logo White"/>
+                <Typography>
+                    Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b> activities...
+                </Typography>
+                <Link 
+                    href="#" 
+                    className='join-link'
+                >
                     Tell me more
                 </Link>
-              </Box>
-              <Button sx={{ padding: '15px 50px' }} onClick={e => scrollToDiv('about')}>
-                Join TreatCoin
-              </Button>
+                <Button
+                    className='join-button'
+                    onClick={e => scrollToDiv('about')}
+                >
+                    Join TreatCoin
+                </Button>
             </Box>
-          </Paper>
+            </Paper>
         </Box>
         <Box
-            display='flex'
+            className='treatcoin-container'
             flexDirection='column'
-            alignItems='center'
-            textAlign='center'
             gap={3}
             px={2}
             py={6}
-            sx={{
-              borderBottom: '13px solid transparent',
-              borderImage: 'url("images/border.png") 100 13',
-              position: 'relative'
-            }}
         >
-            <Typography variant='h3' mb={3}>
-              Treat Coins = Money
+            <Typography className='title' fontSize={44} mb={3}>
+            Treat Coins = Money
             </Typography>
             <Typography variant='h5' color='white'>
-              You earn:
+            You earn:
             </Typography>
             <Box sx={{width: '100%', position: 'relative'}}>
                 <SwiperContainer/>
             </Box>
             <Typography variant='h5' color='white'>
-              You get:
+            You get:
             </Typography>
             <Box>
-              <Typography variant='h5' color='#CB8F6D' fontSize={41}>
+            <Typography variant='h5' color='#CB8F6D' fontSize={41}>
                 $50
-              </Typography>
-              <Typography variant='h5' color='#5FC88F'>
-                in cash, crypto or gift card value
-              </Typography>
-            </Box>
-            <Typography variant='h5' color='white'>
-              Or
-            </Typography>
-            <Box>
-              <Typography variant='h5' color='#CB8F6D' fontSize={41}>
-                $100
-              </Typography>
-              <Typography variant='h5' color='#5FC88F'>
-                to buy NFTs
-              </Typography>
-            </Box>
-            <Typography variant='h5' color='white'>
-              and
             </Typography>
             <Typography variant='h5' color='#5FC88F'>
-              Every month the Top 100 Treat Coin gainers win amazing prizes!
+                in cash, crypto or gift card value
             </Typography>
-            <Button sx={{mt: 3}}>Start Earning TreatCoins</Button>
+            </Box>
+            <Typography variant='h5' color='white'>
+            Or
+            </Typography>
+            <Box>
+            <Typography variant='h5' color='#CB8F6D' fontSize={41}>
+                $100
+            </Typography>
+            <Typography variant='h5' color='#5FC88F'>
+                to buy NFTs
+            </Typography>
+            </Box>
+            <Typography variant='h5' color='white'>
+                and
+            </Typography>
+            <Typography variant='h5' color='#5FC88F'>
+                Every month the Top 100 Treat Coin gainers win amazing prizes!
+            </Typography>
+            <Button sx={{mt: 3}}>
+                Start Earning TreatCoins
+            </Button>
         </Box>
         <Box className={classes.aboutContainer} id='about'>
             <Typography 
@@ -503,7 +482,7 @@ const Home = () => {
             </Box>
             <Footer/>
             <CookieCard/>
-        </Box>
+      </Box>
     )
 }
 

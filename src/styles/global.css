@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: font-url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap') format('truetype');
+}
+
+html,
+body {
+    background: #141629;
+    font-family: Poppins !important;
+}
+
+.container {
+    border-radius: 38px;
+}
+/* 
+    Fonts
+*/
+
+.title.MuiTypography-root {
+    background: linear-gradient(15deg, #6BC6F5 3.37%, #EE94ED 50.17%, #F5BC68 83.44%, #EFCA45 110.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* 
+    Buttons
+*/
+
+.join-button.MuiButtonBase-root{
+    padding: 15px 50px;
+}
+
+/* 
+    Home
+*/
+
+.join-container {
+    background:
+        url("/public/images/Robot/1.png") left 30% top 100px no-repeat,
+        url("/public/images/Robot/2.png") right 10% top 35px no-repeat,
+        url("/public/images/Robot/3.png") right top 120px no-repeat,
+        url("/public/images/Robot/4.png") right 15% top 280px no-repeat,
+        url("/public/images/Robot/5.png") right 10% top 450px no-repeat,
+        url("/public/images/Robot/6.png") left 15% top 450px no-repeat,
+        url("/public/images/Robot/7.png") left 10% top 350px no-repeat,
+        url("/public/images/Robot/8.png") left top 200px no-repeat,
+        url("/public/images/Robot/robot.png") left 50% top 150px no-repeat,
+        linear-gradient(46.77deg, #DEF5FE 14.02%, #F9E7FF 48.07%, #FEEBE3 69.02%, #FFF1CC 91.84%);
+    height: 800px;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.join-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.join-link.MuiLink-root {
+    color: black;
+    text-decoration-color: black;
+}
+
+.treatcoin-container {
+    border-bottom: 13px solid transparent;
+    border-image: url("/public/images/border.png") 100 13;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

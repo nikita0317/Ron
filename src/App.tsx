@@ -1,9 +1,11 @@
-import './App.css';
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './Home';
 import ResetPassword from './pages/resetPassword';
 import Reset from './pages/reset';
+
+import './App.css';
+import './styles/global.css';
 
 function App() {
   return (
