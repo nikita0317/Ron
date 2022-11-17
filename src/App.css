@@ -20,12 +20,14 @@ body, html {
 }
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  color: #CB8F6D;
+  /* color: transparent; */
+  -webkit-text-stroke: 1px white;
+  /* color: #CB8F6D; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  font-size: 41px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -42,6 +44,10 @@ body, html {
   object-fit: cover;
 }
 
-.swiper-slide-active .MuiTypography-root {
-  color: 'white !important'
+.swiper-slide-active{
+  -webkit-text-stroke: unset;
+}
+
+.swiper-slide-active .MuiTypography-root.MuiTypography-h5{
+  color: #CB8F6D;
 }

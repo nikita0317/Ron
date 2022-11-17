@@ -14,8 +14,10 @@ const SwiperContainer = () => {
         <>
           <Swiper
             slidesPerView={3}
-            spaceBetween={30}
+            spaceBetween={50}
             freeMode={true}
+            centeredSlides={true}
+            loop={true}
             pagination={{
               clickable: true,
             }}
@@ -26,7 +28,14 @@ const SwiperContainer = () => {
               data.map((item)=>{
                 return (
                   <SwiperSlide>
-                    <Typography variant='h5'  fontSize={41}>
+                    <Typography
+                      variant='h5'
+                      fontSize={41}
+                      fontWeight={500}
+                      sx={{
+                        userSelect: 'none'
+                      }}
+                    >
                       {item.toLocaleString('en-US')}<sub style={{fontSize: '14px'}}>TC</sub>
                     </Typography>
                   </SwiperSlide>
