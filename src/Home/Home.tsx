@@ -125,6 +125,12 @@ const Home = () => {
         },
     ];
 
+    const scrollToDiv = (text: string) => {
+        window.scrollTo({
+          top: document.getElementById(text)?.offsetTop,
+          behavior: 'smooth' // for smoothly scrolling
+        });
+    };
     
     return (
       <Box bgcolor='#141629'>
@@ -154,7 +160,7 @@ const Home = () => {
                     Tell me more
                 </Link>
               </Box>
-              <Button sx={{ padding: '15px 50px' }}>
+              <Button sx={{ padding: '15px 50px' }} onClick={e => scrollToDiv('about')}>
                 Join TreatCoin
               </Button>
             </Box>
@@ -213,7 +219,7 @@ const Home = () => {
             </Typography>
             <Button sx={{mt: 3}}>Start Earning TreatCoins</Button>
         </Box>
-        <Box className={classes.aboutContainer}>
+        <Box className={classes.aboutContainer} id='about'>
             <Typography variant='h3'>
                 How Does it Work?
             </Typography>
