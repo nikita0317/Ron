@@ -56,5 +56,44 @@
         "used": 12533,
         "availableTitle": "Competition Valid Treat Coins",
         "available": 2533
-    }
+    },
+    "awardLists": [
+        {
+            "id": 1,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        },
+        {
+            "id": 2,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        },
+        {
+            "id": 3,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        },
+        {
+            "id": 4,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        },
+        {
+            "id": 5,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        },
+        {
+            "id": 6,
+            "name": "BLAXX",
+            "coin": 5965,
+            "prize": 156
+        }
+    ],
+    "treatCoinSwiperData": [5000, 10000, 5000, 10000, 5000, 10000, 5000, 10000]
 }

@@ -6,9 +6,28 @@ import "swiper/css/pagination";
 
 import { FreeMode, Pagination } from "swiper";
 import { Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const SwiperContainer = () => {
-    const data = [5000, 10000, 5000, 10000, 5000, 10000, 5000, 10000];
+    const [swiperData, setSwiperData] = useState<number[]>([]);
+    
+    const getData = async () => {
+        const data = await fetch("Data/Data.json", {
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        })
+            .then(function (response) {
+                return response.json();
+            });
+
+            setSwiperData(data.treatCoinSwiperData);
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <>
@@ -24,7 +43,7 @@ const SwiperContainer = () => {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >
-                {data.map((item) => {
+                {swiperData.map((item) => {
                     return (
                         <SwiperSlide>
                             <Typography

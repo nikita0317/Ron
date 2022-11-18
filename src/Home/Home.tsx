@@ -1,49 +1,30 @@
 import { Box, Button, Link, Paper, Theme, Typography, Divider, Stack } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Footer from "../Footer";
 import CookieCard from "../components/CookieCard";
 import SwiperContainer from "../components/SwiperContainer";
 
 const Home = () => {
-    const awardLists = [
-        {
-            id: 1,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-        {
-            id: 2,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-        {
-            id: 3,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-        {
-            id: 4,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-        {
-            id: 5,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-        {
-            id: 6,
-            name: "BLAXX",
-            coin: 5965,
-            prize: 156,
-        },
-    ];
+    const [awardLists, setAwardLists] = useState([]);
+
+    const getData = async () => {
+        const data = await fetch("Data/Data.json", {
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        })
+            .then(function (response) {
+                return response.json();
+            });
+
+        setAwardLists(data.awardLists);
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
 
     const scrollToDiv = (text: string) => {
         window.scrollTo({
