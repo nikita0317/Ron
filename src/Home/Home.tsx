@@ -1,4 +1,4 @@
-import { Box, Button, Link, Paper, Theme, Typography, Divider, Stack } from "@mui/material";
+import { Box, Button, Link, Paper, Typography, Divider, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Footer from "../Footer";

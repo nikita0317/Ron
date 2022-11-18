@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Box, Theme, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 
 type CardProps = {
   content: {

@@ -2,7 +2,6 @@ import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, Box, List, ListItem, ListItemButton, Theme, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = React.useState(false);
