@@ -221,19 +221,19 @@ const Home = () => {
                   <Box key={i}>
                     <Box className="award-lists-item">
                       <Box display="flex" alignItems="center" gap={2}>
-                        <Box className="award-lists-item-number">{item.id}</Box>
+                        <Box className="award-lists-item-number">#{item.id}</Box>
                         <Typography variant="h6" color="black">
                           <b>{item.name}</b>
                         </Typography>
                       </Box>
                       <Box>
-                        <Typography color="#8D31E4">{item.coin}</Typography>
+                        <Typography color="#8D31E4" fontWeight={700}>{item.coin}</Typography>
                         <Typography color="#141629" sx={{ opacity: 0.5 }}>
                           Treat Coins
                         </Typography>
                       </Box>
                       <Box>
-                        <Typography color="#8D31E4">{item.prize}</Typography>
+                        <Typography color="#8D31E4" fontWeight={700}>{item.prize}</Typography>
                         <Typography color="#141629" sx={{ opacity: 0.5 }}>
                           Prize
                         </Typography>

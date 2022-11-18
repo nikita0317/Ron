@@ -7,8 +7,10 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useTheme } from "@mui/styles";
 
 const SwiperContainer = () => {
+  const slidesPerView = [2, 3, 4, 5, 6];
   const [swiperData, setSwiperData] = useState<number[]>([]);
 
   const getData = async () => {
@@ -28,10 +30,12 @@ const SwiperContainer = () => {
     getData();
   }, []);
 
+  const theme = useTheme();
+  
   return (
     <>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slidesPerView[0]}
         spaceBetween={50}
         freeMode={true}
         centeredSlides={true}
@@ -40,6 +44,20 @@ const SwiperContainer = () => {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
+        breakpoints={{
+          600: {
+            slidesPerView: slidesPerView[0]
+          },
+          768: {
+            slidesPerView: slidesPerView[1]
+          },
+          992: {
+            slidesPerView: slidesPerView[2]
+          },
+          1200: {
+            slidesPerView: slidesPerView[3]
+          },
+        }}
         className="mySwiper"
       >
         {swiperData.map((item, i) => {
