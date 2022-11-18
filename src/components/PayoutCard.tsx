@@ -2,14 +2,6 @@ import React, { FC } from "react";
 import { Box, Theme, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles((theme: Theme) => ({
-  link: {
-    color: "white",
-    fontSize: "14px",
-    width: "100%",
-  },
-}));
-
 type CardProps = {
   content: {
     logo: string;
@@ -20,7 +12,6 @@ type CardProps = {
 };
 
 const PayoutCard: FC<CardProps> = ({ content }) => {
-  const classes = useStyles();
 
   return (
     <Box
