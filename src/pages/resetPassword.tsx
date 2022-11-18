@@ -48,17 +48,17 @@ const ResetPassword = () => {
     }, [date]);
 
     const getData = async () => {
-        const temp = await fetch("Data/Data.json", {
+        const data = await fetch("Data/Data.json", {
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
             },
         }).then(function (response) {
             return response.json();
-        }).then(function (myJson) {
-            setCards(myJson.stateCard);
-            setStateProps(myJson.stateProps)
         });
+
+        setCards(data.stateCard);
+        setStateProps(data.stateProps)
     };
 
     useEffect(() => {
