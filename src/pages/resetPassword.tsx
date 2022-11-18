@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Select, Theme, Typography, MenuItem, IconButton, FormControl, OutlinedInput } from "@mui/material";
+import { Box, Select, Theme, Typography, MenuItem, IconButton, FormControl, OutlinedInput, useTheme, useMediaQuery } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Header from "../components/Header";
 import TreatState from "../components/TreatState";
@@ -64,6 +64,9 @@ const ResetPassword = () => {
     getData();
   }, []);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <>
       <Header overlap={false}/>
@@ -75,7 +78,13 @@ const ResetPassword = () => {
           See all the actions that earned you Treat Coins and your current Treat Coin balance
         </Typography>
         <Box display="flex" justifyContent="center" pt={4} pb={2}>
-          <FormControl sx={{ m: 1, minWidth: "50%", textAlign: "center" }}>
+          <FormControl 
+            sx={{ 
+              m: 1, 
+              width: isMobile ? "50%" : "500px", 
+              textAlign: "center" 
+            }}
+          >
             <Select
               value={date}
               onChange={dateChange}
