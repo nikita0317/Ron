@@ -52,6 +52,7 @@ const TreatState:FC<StateProps> = ({state}) => {
       >
         <Typography
           variant="h3"
+          className='title'
           py={2}
           fontWeight="700"
           textAlign="center"
@@ -82,6 +83,7 @@ const TreatState:FC<StateProps> = ({state}) => {
         <Box>
           <Typography
             variant="h3"
+            className='title'
             py={2}
             fontWeight="700"
             textAlign="center"
@@ -109,6 +111,7 @@ const TreatState:FC<StateProps> = ({state}) => {
         <Box>
           <Typography
             variant="h3"
+            className='title'
             py={2}
             fontWeight="700"
             textAlign="center"

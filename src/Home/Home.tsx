@@ -61,15 +61,9 @@ const Home = () => {
             <MenuIcon/>
             <Paper 
               elevation={15}
-              sx={{
-                px: 1,
-                py: 2,
-              }}
+              className='join-card'
             >
-            <Box
-                className='join-card'
-                gap={2}
-            >
+            <Box className='join-card-content'>
                 <img src='images/Logo white.png' alt="Logo White"/>
                 <Typography>
                     Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b> activities...

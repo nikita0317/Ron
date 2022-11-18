@@ -63,11 +63,17 @@ body {
     justify-content: space-between;
 }
 
-.join-card {
+.join-card.MuiPaper-root {
+    border-radius: 38px;
+    padding: 16px;
+}
+
+.join-card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 16px;
 }
 
 .join-link.MuiLink-root {
