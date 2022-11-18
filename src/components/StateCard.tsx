@@ -31,11 +31,7 @@ const StateCard: FC<CardProps> = ({ content }) => {
   return (
     <Box
       bgcolor={content.bgCol}
-      borderRadius={5}
-      boxShadow="0px 4px 4px rgba(159, 125, 219, 0.15)"
-      textAlign="center"
-      padding="20px"
-      my={3}
+      className='state-card'
     >
       <Box display="flex" justifyContent="space-between">
         <img src={`images/${content.logo}.png`} alt="client-logo" />

@@ -174,7 +174,7 @@ const Home = () => {
                     <Typography mt={3} variant="h4" color="white" fontSize={44}>
                         May's Leaderboards
                     </Typography>
-                    <Box display="flex" flexDirection="row" justifyContent="space-between" gap={2} px={2}>
+                    <Box display="flex" flexDirection="row" justifyContent="space-between" px={2}>
                         <Box pt={3}>
                             <Typography color="white">2nd</Typography>
                             <img src="images/awards/2.png" alt="Second Award" />

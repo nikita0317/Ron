@@ -303,3 +303,16 @@ body {
     display: flex;
     gap: 16px;
 }
+
+/* 
+    State Card
+*/
+
+.state-card {
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(159, 125, 219, 0.15);
+    text-align: center;
+    padding: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

@@ -3,16 +3,7 @@ import CookieConsent from "react-cookie-consent";
 import { makeStyles } from "@mui/styles";
 import { classicNameResolver } from "typescript";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    background: 'white',
-    borderRadius: '38px',
-    marginBottom: '10px'
-  },
-}));
-
 const CookieCard = () => {
-    const classes = useStyles();
 
     return (
       <CookieConsent
