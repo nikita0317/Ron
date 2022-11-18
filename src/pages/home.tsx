@@ -1,9 +1,10 @@
 import { Box, Button, Link, Paper, Typography, Divider, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import Footer from "../Footer";
 import CookieCard from "../components/CookieCard";
 import SwiperContainer from "../components/SwiperContainer";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Home = () => {
   const [awardLists, setAwardLists] = useState([]);
@@ -33,9 +34,9 @@ const Home = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{overflowX: 'hidden'}}>
       <Box className="join-container" p={2}>
-        <MenuIcon fontSize="large" />
+        <Header overlap={true} />
         <Paper elevation={15} className="join-card">
           <Box className="join-card-content">
             <img src="images/Logo white.png" alt="Logo White" />
@@ -169,66 +170,47 @@ const Home = () => {
       </Box>
       <Box className="leader-board-container">
         <Box className="leader-board-card">
-          <Typography mt={3} variant="h4" color="white" fontSize={44}>
+          <Typography
+            mt={3}
+            variant="h4"
+            color="white"
+            fontSize={44}
+          >
             May's Leaderboards
           </Typography>
-          <Box display="flex" flexDirection="row" justifyContent="space-between" px={2}>
-            <Box pt={3}>
+          <Box 
+            className='top-awards'
+          >
+            <Box sx={{ paddingTop: "20px", position: "relative" }}>
               <Typography color="white">2nd</Typography>
               <img src="images/awards/2.png" alt="Second Award" />
-              <Box
-                sx={{
-                  position: "relative",
-                }}
-              >
-                <Box>
-                  <Typography color="white">PLAXX</Typography>
-                  <Typography color="white">5980 Treat Coins</Typography>
-                  <Typography color="white">Motorcycle worth $3K</Typography>
-                </Box>
-                <Box
-                  sx={{
-                    width: "100%",
-                    position: "absolute",
-                    top: "10px",
-                    height: "200px",
-                    background: "linear-gradient(138.74deg, #8938B9 7.25%, #6219DE 65.79%)",
-                    mixBlendMode: "screen",
-                    opacity: "0.5",
-                    transform: "matrix(-0.97, 0.25, 0.25, 0.97, 0, 0)",
-                  }}
-                ></Box>
-              </Box>
-            </Box>
-            <Box>
-              <img src="images/awards/crown.png" alt="Award Crown Logo" />
-              <br />
-              <img src="images/awards/1.png" alt="First Award" />
-              <Box
-                sx={
-                  {
-                    // background: 'url("images/awards/1_back.png") no-repeat',
-                  }
-                }
-              >
+              <Box>
                 <Typography color="white">PLAXX</Typography>
                 <Typography color="white">5980 Treat Coins</Typography>
                 <Typography color="white">Motorcycle worth $3K</Typography>
+                <Box className='backRectangle1'/>
               </Box>
             </Box>
-            <Box pt={3}>
+            <Box sx={{ position: 'relative' }}>
+              <Box>
+                <img src="images/awards/crown.png" alt="Award Crown Logo" />
+              </Box>
+              <img src="images/awards/1.png" alt="First Award" />
+              <Box>
+                <Typography color="white">PLAXX</Typography>
+                <Typography color="white">5980 Treat Coins</Typography>
+                <Typography color="white">Motorcycle worth $3K</Typography>
+                <Box className='backRectangle2'/>
+              </Box>
+            </Box>
+            <Box sx={{ marginTop: '20px', position: 'relative' }}>
               <Typography color="white">3rd</Typography>
               <img src="images/awards/3.png" alt="Third Award" />
-              <Box
-                sx={
-                  {
-                    // background: 'url("images/awards/3_back.png") no-repeat',
-                  }
-                }
-              >
+              <Box>
                 <Typography color="white">PLAXX</Typography>
                 <Typography color="white">5980 Treat Coins</Typography>
                 <Typography color="white">Motorcycle worth $3K</Typography>
+                <Box className='backRectangle3'/>
               </Box>
             </Box>
           </Box>
@@ -291,7 +273,7 @@ const Home = () => {
         <Link>See all offers</Link>
         <Button className="join-button">Join TreatCoin</Button>
       </Box>
-      <Footer />
+      <Footer list={true} />
       <CookieCard />
     </Box>
   );

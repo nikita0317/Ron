@@ -1,9 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, Box, List, ListItem, ListItemButton, Theme, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+type headerProps = {
+  overlap: boolean
+}
+
+const Header:FC<headerProps> = ({overlap}) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (event.type === "keydown" && ((event as React.KeyboardEvent).key === "Tab" || (event as React.KeyboardEvent).key === "Shift")) {
@@ -15,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <Box className="header">
+      <Box className={`header ${overlap && "overlap"}`}>
         <IconButton onClick={toggleDrawer(true)} className="menu-icon" size="large" sx={{ position: "absolute" }}>
           {" "}
           <MenuIcon fontSize="large" sx={{ color: "#282B54" }} />

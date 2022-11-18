@@ -21,11 +21,18 @@ body {
 
 .header {
     background: linear-gradient(46.77deg, #DEF5FE 14.02%, #F9E7FF 48.07%, #FEEBE3 69.02%, #FFF1CC 91.84%);
-    display: flex;
     padding: 20px;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative
+}
+
+.header.overlap {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .menu-icon {
@@ -54,6 +61,11 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
+}
+
+.footer .MuiLink-root {
+    white-space: nowrap;
+    color: white;
 }
 
 /* 
@@ -214,6 +226,53 @@ body {
     gap: 20px;
 }
 
+.leader-board-card .top-awards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.leader-board-card .top-awards .backRectangle1 {
+    background: linear-gradient(138.74deg, #8938B9 7.25%, #6219DE 65.79%);
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    transform: matrix(-0.97, 0.25, 0.25, 0.97, 0, 0);
+    height: 70%;
+    position: absolute;
+    bottom: -24%;
+    width: 92%;
+    left: 8%;
+    border-radius: 80px / 10px;
+}
+
+.leader-board-card .top-awards .backRectangle2 {
+    background: linear-gradient(138.74deg, #8938B9 7.25%, #6219DE 65.79%);
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    transform: matrix(-0.97, 0.25, 0.25, 0.97, 0, 0);
+    height: 94%;
+    position: absolute;
+    bottom: -43%;
+    width: 95%;
+    left: -18%;
+    border-radius: 80px / 10px;
+    margin: 30px;
+    transform: perspective(700px) rotateX(143deg);
+}
+
+.leader-board-card .top-awards .backRectangle3 {
+    background: linear-gradient(138.74deg, #8938B9 7.25%, #6219DE 65.79%);
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    transform: rotate(14.6deg);
+    height: 70%;
+    position: absolute;
+    bottom: -24%;
+    width: 95%;
+    left: 0;
+    border-radius: 80px / 10px;
+}
+
 .leader-board-card .award-lists {
     border-radius: 38px;
     padding: 20px;
@@ -223,7 +282,7 @@ body {
     text-align: center;
 }
 
-.leader-board-card .award-lists>.award-lists-content {
+.leader-board-card .award-lists .award-lists-content {
     background: #F6F7FB;
     padding: 16px;
     display: flex;
@@ -231,14 +290,14 @@ body {
     border-radius: 38px;
 }
 
-.leader-board-card .award-lists>.award-lists-content>.award-lists-item {
+.leader-board-card .award-lists .award-lists-content .award-lists-item {
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-.leader-board-card .award-lists>.award-lists-content>.award-lists-item>* .award-lists-item-number {
+.leader-board-card .award-lists .award-lists-content .award-lists-item .award-lists-item-number {
     width: 45px;
     height: 45px;
     background: url("/public/images/awards/item.png");
@@ -260,7 +319,7 @@ body {
     text-align: left;
 }
 
-.offer-container .offer-item>img:last-child {
+.offer-container .offer-item img:last-child {
     margin-top: 20px;
     border-radius: 20px;
 }

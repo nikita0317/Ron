@@ -37,7 +37,7 @@ const Reset = () => {
 
   return (
     <>
-      <Header />
+      <Header overlap={false}/>
       <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center">
         <Typography variant="h3" className="title" py={2} textAlign="center">
           My Treat Coin Earnings
