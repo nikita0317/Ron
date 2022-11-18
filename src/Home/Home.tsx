@@ -14,10 +14,9 @@ const Home = () => {
                 "Content-Type": "application/json",
                 Accept: "application/json",
             },
-        })
-            .then(function (response) {
-                return response.json();
-            });
+        }).then(function (response) {
+            return response.json();
+        });
 
         setAwardLists(data.awardLists);
     };
@@ -179,15 +178,27 @@ const Home = () => {
                             <Typography color="white">2nd</Typography>
                             <img src="images/awards/2.png" alt="Second Award" />
                             <Box
-                                sx={
-                                    {
-                                        // background: 'url("images/awards/2_back.png") no-repeat',
-                                    }
-                                }
+                                sx={{
+                                    position: "relative",
+                                }}
                             >
-                                <Typography color="white">PLAXX</Typography>
-                                <Typography color="white">5980 Treat Coins</Typography>
-                                <Typography color="white">Motorcycle worth $3K</Typography>
+                                <Box>
+                                    <Typography color="white">PLAXX</Typography>
+                                    <Typography color="white">5980 Treat Coins</Typography>
+                                    <Typography color="white">Motorcycle worth $3K</Typography>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        width: "100%",
+                                        position: "absolute",
+                                        top: "10px",
+                                        height: "200px",
+                                        background: "linear-gradient(138.74deg, #8938B9 7.25%, #6219DE 65.79%)",
+                                        mixBlendMode: "screen",
+                                        opacity: "0.5",
+                                        transform: "matrix(-0.97, 0.25, 0.25, 0.97, 0, 0)",
+                                    }}
+                                ></Box>
                             </Box>
                         </Box>
                         <Box>
@@ -224,9 +235,9 @@ const Home = () => {
                     </Box>
                     <Paper elevation={15} className="award-lists">
                         <Box className="award-lists-content">
-                            {awardLists.map((item: any) => {
+                            {awardLists.map((item:any, i) => {
                                 return (
-                                    <>
+                                    <Box key={i}>
                                         <Box className="award-lists-item">
                                             <Box display="flex" alignItems="center" gap={2}>
                                                 <Box className="award-lists-item-number">{item.id}</Box>
@@ -248,7 +259,7 @@ const Home = () => {
                                             </Box>
                                         </Box>
                                         <Divider />
-                                    </>
+                                    </Box>
                                 );
                             })}
                         </Box>

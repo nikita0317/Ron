@@ -43,9 +43,9 @@ const SwiperContainer = () => {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >
-                {swiperData.map((item) => {
+                {swiperData.map((item, i) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={i}>
                             <Typography
                                 variant="h5"
                                 fontSize={41}
