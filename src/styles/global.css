@@ -14,6 +14,39 @@ body {
 .container {
     border-radius: 38px;
 }
+
+/* 
+    Header
+*/
+
+.header {
+    background: linear-gradient(46.77deg, #DEF5FE 14.02%, #F9E7FF 48.07%, #FEEBE3 69.02%, #FFF1CC 91.84%);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.header .menu-icon {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.header .logo {
+    width: 150px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+}
+
 /* 
     Fonts
 */
@@ -36,7 +69,7 @@ body {
     Buttons
 */
 
-.join-button.MuiButtonBase-root{
+.join-button.MuiButtonBase-root {
     padding: 15px 50px;
 }
 
@@ -181,7 +214,7 @@ body {
     text-align: center;
 }
 
-.leader-board-card .award-lists > .award-lists-content {
+.leader-board-card .award-lists>.award-lists-content {
     background: #F6F7FB;
     padding: 16px;
     display: flex;
@@ -189,14 +222,14 @@ body {
     border-radius: 38px;
 }
 
-.leader-board-card .award-lists > .award-lists-content > .award-lists-item {
+.leader-board-card .award-lists>.award-lists-content>.award-lists-item {
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-.leader-board-card .award-lists > .award-lists-content > .award-lists-item >* .award-lists-item-number {
+.leader-board-card .award-lists>.award-lists-content>.award-lists-item>* .award-lists-item-number {
     width: 45px;
     height: 45px;
     background: url("/public/images/awards/item.png");
@@ -218,7 +251,7 @@ body {
     text-align: left;
 }
 
-.offer-container .offer-item > img:last-child {
+.offer-container .offer-item>img:last-child {
     margin-top: 20px;
     border-radius: 20px;
 }
@@ -249,7 +282,7 @@ body {
     gap: 40px;
 }
 
-.payout-card-description .MuiTypography-root{
+.payout-card-description .MuiTypography-root {
     line-height: 1.5;
     font-weight: 700;
     text-align: left;
