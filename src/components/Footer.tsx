@@ -1,19 +1,9 @@
 import { Box, Theme, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles((theme: Theme) => ({
-  footer: {
-    textAlign: "center",
-    padding: "20px",
-  },
-}));
 
 const Footer = () => {
-  const classes = useStyles();
-
   return (
     <>
-      <Box className={classes.footer}>
+      <Box className='footer'>
         <Typography color="white" textAlign="center">
           © TreatBot.io
         </Typography>
