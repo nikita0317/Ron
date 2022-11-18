@@ -227,3 +227,37 @@ body {
     color: white;
     text-decoration-color: white;
 }
+
+
+/* 
+    Payout Card
+*/
+
+.payout-card {
+    background-color: #fff;
+    border-radius: 48px;
+    box-shadow: 0px 4px 4px rgba(159, 125, 219, 0.15);
+    padding: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.payout-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.payout-card-description .MuiTypography-root{
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.payout-card-actions {
+    display: flex;
+    gap: 16px;
+}

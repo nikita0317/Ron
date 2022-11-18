@@ -58,7 +58,7 @@ const Home = () => {
             className='join-container'
             p={2}
         >
-            <MenuIcon/>
+            <MenuIcon fontSize="large" />
             <Paper 
               elevation={15}
               className='join-card'

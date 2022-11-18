@@ -24,30 +24,15 @@ const PayoutCard: FC<CardProps> = ({ content }) => {
 
   return (
     <Box
-      bgcolor="#fff"
-      borderRadius={8}
-      boxShadow="0px 4px 4px rgba(159, 125, 219, 0.15)"
-      padding="20px"
-      my={3}
+      className='payout-card'
     >
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        gap={5}
-      >
+      <Box className='payout-card-content'>
         <img src={`images/${content.logo}.png`} alt="client-logo" />
-        <Box>
-          <Typography
-            lineHeight={1.5}
-            fontWeight={700}
-            textAlign="left"
-            fontSize={16}
-            mb={0.5}
-          >
+        <Box className='payout-card-description'>
+          <Typography>
             {content.content}
           </Typography>
-          <Box display="flex" gap={2}>
+          <Box className='payout-card-actions'>
             {content.state && (
               <Typography
                 color="#fff"
