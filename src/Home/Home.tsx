@@ -235,7 +235,7 @@ const Home = () => {
                     </Box>
                     <Paper elevation={15} className="award-lists">
                         <Box className="award-lists-content">
-                            {awardLists.map((item:any, i) => {
+                            {awardLists.map((item: any, i) => {
                                 return (
                                     <Box key={i}>
                                         <Box className="award-lists-item">
