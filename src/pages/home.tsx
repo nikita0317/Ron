@@ -1,4 +1,4 @@
-import { Box, Button, Link, Paper, Typography, Divider, Stack } from "@mui/material";
+import { Box, Button, Link, Paper, Typography, Divider, Stack, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CookieCard from "../components/CookieCard";
@@ -97,43 +97,53 @@ const Home = () => {
         <Typography variant="h3" fontSize={55} className="title">
           How Does it Work?
         </Typography>
-        <Box>
-          <img src="images/about/1.png" />
-          <Typography variant="h5" color="#CB8F6D">
-            Meet Treat Coin
-          </Typography>
-          <Typography variant="body1" color="white">
-            Treat Coin is our virtual currency that’s worth money. The more Treat Coins you gain, the more they will earn back for you
-          </Typography>
-        </Box>
-        <Box>
-          <img src="images/about/2.png" />
-          <Typography variant="h5" color="#CB8F6D">
-            Gain Treat Coins
-          </Typography>
-          <Typography variant="body1" color="white">
-            Build your team of referrals and gain Treat Coins for every 1st & 2nd gen sign up and for every fun activity you or your team members
-            complete
-          </Typography>
-        </Box>
-        <Box>
-          <img src="images/about/3.png" />
-          <Typography variant="h5" color="#CB8F6D">
-            Use Your TreatCoins
-          </Typography>
-          <Typography variant="body1" color="white">
-            Use the Treat Coins you gain to convert them to cash, gift cards, cryptocurrency or use them to get NFTs in our coming soon virtual market
-          </Typography>
-        </Box>
-        <Box>
-          <img src="images/about/4.png" />
-          <Typography variant="h5" color="#CB8F6D">
-            Big Prizes Every Month
-          </Typography>
-          <Typography variant="body1" color="white">
-            Every month the Top 100 TreatCoin gainers win amazing prizes. Each Treat Coin you gain counts - even if you cashed it!
-          </Typography>
-        </Box>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box>
+              <img src="images/about/1.png" />
+              <Typography variant="h5" color="#CB8F6D">
+                Meet Treat Coin
+              </Typography>
+              <Typography variant="body1" color="white">
+                Treat Coin is our virtual currency that’s worth money. The more Treat Coins you gain, the more they will earn back for you
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box>
+              <img src="images/about/2.png" />
+              <Typography variant="h5" color="#CB8F6D">
+                Gain Treat Coins
+              </Typography>
+              <Typography variant="body1" color="white">
+                Build your team of referrals and gain Treat Coins for every 1st & 2nd gen sign up and for every fun activity you or your team members
+                complete
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box>
+              <img src="images/about/3.png" />
+              <Typography variant="h5" color="#CB8F6D">
+                Use Your TreatCoins
+              </Typography>
+              <Typography variant="body1" color="white">
+                Use the Treat Coins you gain to convert them to cash, gift cards, cryptocurrency or use them to get NFTs in our coming soon virtual market
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box>
+              <img src="images/about/4.png" />
+              <Typography variant="h5" color="#CB8F6D">
+                Big Prizes Every Month
+              </Typography>
+              <Typography variant="body1" color="white">
+                Every month the Top 100 TreatCoin gainers win amazing prizes. Each Treat Coin you gain counts - even if you cashed it!
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
         <Button>Join TreatCoin</Button>
       </Box>
       <Box className="prize-container">
