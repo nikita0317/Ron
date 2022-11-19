@@ -364,6 +364,7 @@ body {
 .payout-card-actions {
     display: flex;
     gap: 16px;
+    height: 30px;
 }
 
 /* 

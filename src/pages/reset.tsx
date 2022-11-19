@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Theme, Typography } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Header from "../components/Header";
 import TreatState from "../components/TreatState";
@@ -35,23 +35,28 @@ const Reset = () => {
     available: 2533,
   };
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  
   return (
     <>
       <Header overlap={false}/>
-      <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center">
-        <Typography variant="h3" className="title" py={2} textAlign="center">
-          My Treat Coin Earnings
-        </Typography>
-        <Typography mt={2} textAlign="center" fontWeight={400} color="white" variant="h6" mb={3}>
-          See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance
-        </Typography>
-        <TreatState state={stateProps} />
-        <Typography mt={2} textAlign="center" fontWeight={400} color="white" sx={{ textDecoration: "underline" }}>
-          My payouts:
-        </Typography>
-        {cards.map((card, index) => (
-          <PayoutCard content={card} key={index} />
-        ))}
+      <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center" display='flex' flexDirection='column' alignItems='center' >
+        <Box width={isMobile ? '100%' : '800px'}>
+          <Typography variant="h3" className="title" py={2} textAlign="center">
+            My Treat Coin Earnings
+          </Typography>
+          <Typography mt={2} textAlign="center" fontWeight={400} color="white" variant="h6" mb={3}>
+            See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance
+          </Typography>
+          <TreatState state={stateProps} />
+          <Typography mt={2} textAlign="center" fontWeight={400} color="white" sx={{ textDecoration: "underline" }}>
+            My payouts:
+          </Typography>
+          {cards.map((card, index) => (
+            <PayoutCard content={card} key={index} />
+          ))}
+        </Box>
         <Footer />
       </Box>
     </>

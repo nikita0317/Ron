@@ -70,7 +70,7 @@ const ResetPassword = () => {
   return (
     <>
       <Header overlap={false}/>
-      <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center">
+      <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center"  display='flex' flexDirection='column' alignItems='center'>
         <Typography variant="h3" className="title" py={2} fontWeight="700" textAlign="center">
           My Treat Coin Earnings
         </Typography>
@@ -106,13 +106,15 @@ const ResetPassword = () => {
             </Select>
           </FormControl>
         </Box>
-        {stateProps && <TreatState state={stateProps} />}
-        <IconButton>
-          <RefreshIcon sx={{ color: "white", padding: "14px" }} fontSize="large" />
-        </IconButton>
-        {cards.map((card: any, index) => (
-          <StateCard key={index} content={card} />
-        ))}
+        <Box width={isMobile ? '100%' : '800px'}>
+          {stateProps && <TreatState state={stateProps} />}
+          <IconButton>
+            <RefreshIcon sx={{ color: "white", padding: "14px" }} fontSize="large" />
+          </IconButton>
+          {cards.map((card: any, index) => (
+            <StateCard key={index} content={card} />
+          ))}
+        </Box>
         <Footer />
       </Box>
     </>
