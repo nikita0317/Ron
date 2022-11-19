@@ -81,7 +81,7 @@ const ResetPassword = () => {
           <FormControl 
             sx={{ 
               m: 1, 
-              width: isMobile ? "50%" : "500px", 
+              minWidth: isMobile ? "50%" : "400px", 
               textAlign: "center" 
             }}
           >
