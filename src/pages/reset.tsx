@@ -5,26 +5,24 @@ import Header from "../components/Header";
 import TreatState from "../components/TreatState";
 import Footer from "../components/Footer";
 import PayoutCard from "../components/PayoutCard";
+import { getData } from "../utils/helpers";
+import Loading from "../components/Loading";
 
 const Reset = () => {
   const [cards, setCards] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const getData = async () => {
-    const data = await fetch("Data/Data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      });
-
-    setCards(data.payoutCard);
+  const fetchAssetData = async () => {
+    setIsLoading(true);
+    const data: any = await getData();
+    setTimeout(()=> {
+      setCards(data.payoutCard);
+    }, 500);
+    setIsLoading(false);
   };
 
   useEffect(() => {
-    getData();
+    fetchAssetData();
   }, []);
 
   const stateProps = {
@@ -37,6 +35,14 @@ const Reset = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  
+  if( isLoading ) {
+    return (
+      <Box display='flex' justifyContent='center' alignItems='center' color='white' height='100vh'>
+        <Loading/>
+      </Box>
+    )
+  }
   
   return (
     <>

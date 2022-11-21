@@ -1,29 +1,27 @@
 import { Box, Button, Link, Paper, Typography, Divider, Stack, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import CookieCard from "../components/CookieCard";
 import SwiperContainer from "../components/SwiperContainer";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { getData } from "../utils/helpers";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const [awardLists, setAwardLists] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const getData = async () => {
-    const data = await fetch("Data/Data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    }).then(function (response) {
-      return response.json();
-    });
-
-    setAwardLists(data.awardLists);
+  const fetchAssetData = async () => {
+    setIsLoading(true);
+    const data: any = await getData();
+    setTimeout(()=> {
+      setAwardLists(data.awardLists);
+    }, 500)
+    setIsLoading(false);
   };
 
   useEffect(() => {
-    getData();
+    fetchAssetData();
   }, []);
 
   const scrollToDiv = (text: string) => {
@@ -33,7 +31,13 @@ const Home = () => {
     });
   };
 
-  return (
+  if( isLoading ) {
+    return (
+      <Box display='flex' justifyContent='center' alignItems='center' color='white' height='100vh'>
+        <Loading/>
+      </Box>
+    )
+  } else return (
     <Box sx={{overflowX: 'hidden'}}>
       <Box className="join-container" p={2}>
         <Header overlap={true} />
