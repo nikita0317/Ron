@@ -8,65 +8,69 @@ import PayoutCard from "../components/PayoutCard";
 import { getData } from "../utils/helpers";
 import Loading from "../components/Loading";
 
-const Reset = () => {
-  const [cards, setCards] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+class Reset extends React.Component<any, any> {
+  constructor( props: any ) {
+    super( props );
+    this.state = {
+      cards: [],
+      isLoading: false,
+      stateProps: {
+        state: "LifeTime Usable",
+        total: 155654,
+        used: 12533,
+        availableTitle: "stateProps",
+        available: 2533,
+      }
+    }
+  }
 
-  const fetchAssetData = async () => {
-    setIsLoading(true);
+  fetchAssetData = async () => {
+    this.setState({ isLoading: true });
     const data: any = await getData();
     setTimeout(()=> {
-      setCards(data.payoutCard);
+      this.setState({ cards: data.payoutCard})
     }, 500);
-    setIsLoading(false);
+    this.setState({ isLoading: false });
   };
 
-  useEffect(() => {
-    fetchAssetData();
-  }, []);
-
-  const stateProps = {
-    state: "LifeTime Usable",
-    total: 155654,
-    used: 12533,
-    availableTitle: "stateProps",
-    available: 2533,
-  };
-
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  
-  if( isLoading ) {
-    return (
-      <Box display='flex' justifyContent='center' alignItems='center' color='white' height='100vh'>
-        <Loading/>
-      </Box>
-    )
+  componentDidMount(){
+    this.fetchAssetData();
   }
   
-  return (
-    <>
-      <Header overlap={false}/>
-      <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center" display='flex' flexDirection='column' alignItems='center' >
-        <Box width={isMobile ? '100%' : '800px'}>
-          <Typography variant="h3" className="title" py={2} textAlign="center">
-            My Treat Coin Earnings
-          </Typography>
-          <Typography mt={2} textAlign="center" fontWeight={400} color="white" variant="h6" mb={3}>
-            See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance
-          </Typography>
-          <TreatState state={stateProps} />
-          <Typography mt={2} textAlign="center" fontWeight={400} color="white" sx={{ textDecoration: "underline" }}>
-            My payouts:
-          </Typography>
-          {cards.map((card, index) => (
-            <PayoutCard content={card} key={index} />
-          ))}
+  render(){
+    if( this.state.isLoading ) {
+      return (
+        <Box display='flex' justifyContent='center' alignItems='center' color='white' height='100vh'>
+          <Loading/>
         </Box>
-        <Footer />
-      </Box>
-    </>
-  );
+      )
+    }
+    
+    return (
+      <>
+        <Header overlap={false}/>
+        <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center" display='flex' flexDirection='column' alignItems='center' >
+          <Box className='reset-page'>
+            <Typography variant="h3" className="title" py={2} textAlign="center">
+              My Treat Coin Earnings
+            </Typography>
+            <Typography mt={2} textAlign="center" fontWeight={400} color="white" variant="h6" mb={3}>
+              See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance
+            </Typography>
+            <TreatState state={this.state.stateProps} />
+            <Typography mt={2} textAlign="center" fontWeight={400} color="white" sx={{ textDecoration: "underline" }}>
+              My payouts:
+            </Typography>
+            {this.state.cards.map((card: any, index: any) => (
+              <PayoutCard content={card} key={index} />
+            ))}
+          </Box>
+          <Footer />
+        </Box>
+      </>
+    );
+  }
+  
 };
 
 export default Reset;

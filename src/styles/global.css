@@ -382,3 +382,30 @@ body {
     margin-top: 24px;
     margin-bottom: 24px;
 }
+
+ /* 
+    Reset  
+ */
+
+ .reset-page {
+    width: 100%;
+ }
+
+ /* 
+    Reset Password
+ */
+
+ .reset-password-content {
+    width: 100%;
+ }
+
+ @media only screen and ( min-width: 992px) {
+    .reset-page, .reset-password-content{
+       width: 800px;
+    }
+}
+
+.select-icon {
+    fill: #fff !important;
+    color: transparent !important;
+}
