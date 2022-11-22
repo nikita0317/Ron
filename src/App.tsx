@@ -13,7 +13,7 @@ const access_points = configuration.access_points;
 
 const path_home = access_points.home;
 const path_reset = access_points.reset;
-const path_reset_password = access_points.path_reset_password;
+const path_reset_password = access_points.reset_password;
 
 class App extends React.Component {
     render(){
