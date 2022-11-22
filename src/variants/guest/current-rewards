@@ -1,0 +1,22 @@
+{
+  "rewards": [
+    {
+      "position": 1,
+      "amount": 0.5,
+      "currency": "ETH"
+    },
+    {
+      "position": 2,
+      "amount": 0.49,
+      "currency": "ETH"
+    },
+    {
+      "position": 3,
+      "amount": 0.48,
+      "currency": "ETH"
+    }
+  ],
+  "prizeFundAmount": 3.17,
+  "prizeFundCurrency": "ETH",
+  "tokenValid": true
+}

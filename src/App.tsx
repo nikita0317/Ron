@@ -6,17 +6,20 @@ import Reset from "./pages/reset";
 
 import "./App.css";
 import "./styles/global.css";
+import React from "react";
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/reset-password" element={<ResetPassword />} />
-                <Route path="/reset" element={<Reset />} />
-            </Routes>
-        </BrowserRouter>
-    );
+class App extends React.Component {
+    render(){
+        return (
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/reset-password" element={<ResetPassword />} />
+                    <Route path="/reset" element={<Reset />} />
+                </Routes>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;

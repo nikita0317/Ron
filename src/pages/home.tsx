@@ -8,12 +8,19 @@ import { getData } from "../utils/helpers";
 import Loading from "../components/Loading";
 import React from "react";
 
+const configuration = require('../configuration.json');
+const content = require('../content.json');
+const about = require('../variants/guest/about');
+
+const imgPath = configuration.paths.images_path;
+
 class Home extends React.Component<any, any> {
   constructor( props: any ) {
     super( props );
     this.state = {
       awardLists: [],
       isLoading: false,
+      description: []
     }
   }
 
@@ -21,8 +28,15 @@ class Home extends React.Component<any, any> {
     this.setState({ isLoading: true });
     const data: any = await getData();
     setTimeout(()=> {
-      this.setState({ awardsList: data.awardLists});
+      this.setState({ awardLists: data.awardLists });
     }, 500)
+    
+    fetch(about)
+      .then((r)=>r.text())
+      .then(text=>
+        this.setState({ description: JSON.parse(text).description}
+      ))
+
     this.setState({ isLoading: false });
   };
 
@@ -51,15 +65,13 @@ class Home extends React.Component<any, any> {
           <Paper elevation={15} className="join-card">
             <Box className="join-card-content">
               <img src="images/Logo white.png" alt="Logo White" />
-              <Typography>
-                Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b>{" "}
-                activities...
+              <Typography dangerouslySetInnerHTML={{__html: content.join_description}}>
               </Typography>
               <Link href="#" className="join-link">
-                Tell me more
+                {content.tell_me_more}
               </Link>
               <Button className="join-button" onClick={(e) => this.scrollToDiv("about")}>
-                Join TreatCoin
+                {content.join_button}
               </Button>
             </Box>
           </Paper>
@@ -109,53 +121,23 @@ class Home extends React.Component<any, any> {
             How Does it Work?
           </Typography>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box>
-                <img src="images/about/1.png" />
-                <Typography variant="h5" color="#CB8F6D">
-                  Meet Treat Coin
-                </Typography>
-                <Typography variant="body1" color="white">
-                  Treat Coin is our virtual currency that’s worth money. The more Treat Coins you gain, the more they will earn back for you
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box>
-                <img src="images/about/2.png" />
-                <Typography variant="h5" color="#CB8F6D">
-                  Gain Treat Coins
-                </Typography>
-                <Typography variant="body1" color="white">
-                  Build your team of referrals and gain Treat Coins for every 1st & 2nd gen sign up and for every fun activity you or your team members
-                  complete
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box>
-                <img src="images/about/3.png" />
-                <Typography variant="h5" color="#CB8F6D">
-                  Use Your TreatCoins
-                </Typography>
-                <Typography variant="body1" color="white">
-                  Use the Treat Coins you gain to convert them to cash, gift cards, cryptocurrency or use them to get NFTs in our coming soon virtual market
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Box>
-                <img src="images/about/4.png" />
-                <Typography variant="h5" color="#CB8F6D">
-                  Big Prizes Every Month
-                </Typography>
-                <Typography variant="body1" color="white">
-                  Every month the Top 100 TreatCoin gainers win amazing prizes. Each Treat Coin you gain counts - even if you cashed it!
-                </Typography>
-              </Box>
-            </Grid>
+            {this.state.description.map((item: any, i: any) => {
+              return(
+                <Grid item xs={12} sm={6} md={3} key={i}>
+                  <Box>
+                    <img src={`${imgPath}/about/${i+1}.png`} />
+                    <Typography variant="h5" color="#CB8F6D">
+                      {console.log(item.title)}{ item.title}
+                    </Typography>
+                    <Typography variant="body1" color="white">
+                      {item.content}
+                    </Typography>
+                  </Box>
+                </Grid>
+              )
+            })}
           </Grid>
-          <Button>Join TreatCoin</Button>
+          <Button>{content.join_button}</Button>
         </Box>
         <Box className="prize-container">
           <Typography variant="h3" fontSize={55} className="title">
@@ -291,8 +273,8 @@ class Home extends React.Component<any, any> {
             <Typography color="white">Sexy lingerie boutique</Typography>
             <img src="images/offers/none.png" />
           </Box>
-          <Link>See all offers</Link>
-          <Button className="join-button">Join TreatCoin</Button>
+          <Link>{content.see_all_offers}</Link>
+          <Button className="join-button">{content.join_button}</Button>
         </Box>
         <Footer list={true} />
         <CookieCard />

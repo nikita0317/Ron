@@ -1,0 +1,7 @@
+{
+	"website_connection": {
+		"website_url": "http://localhost:3000",
+		"frontend_host": "http://localhost:3000",
+		"backend_host": "http://localhost:3000"
+	}
+}

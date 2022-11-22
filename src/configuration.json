@@ -1,0 +1,18 @@
+{
+  "paths": {
+    "images_path": "images"
+  },
+  "access_points": {
+    "home": "/",
+    "reset": "/reset",
+    "reset_password": "/reset-password"
+  },
+  "response_codes": {
+    "OK": 200,
+    "bad_request": 400,
+    "unauthorized": 401,
+    "forbidden": 403,
+    "internal_server_error": 500,
+    "service_unavailable": 503
+  }
+}
