@@ -1,11 +1,9 @@
 {
   "paths": {
-    "images_path": "images"
+    "images_path": "/images"
   },
   "access_points": {
-    "home": "/",
-    "reset": "/reset",
-    "reset_password": "/reset-password"
+    "about": "/guest/about"
   },
   "response_codes": {
     "OK": 200,
