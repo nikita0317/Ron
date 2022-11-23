@@ -7,12 +7,19 @@ import StateCard from "../components/StateCard";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import Footer from "../components/Footer";
 import { getData } from "../utils/helpers";
+import Server from "../Server";
+
+const content = require("../content.json");
+const backendURLs = Server.backendURLs;
+const payoutCardURL = backendURLs.payoutCard;
+
+let tempComponent: any;
 
 class ResetPassword extends React.Component<any, any> {
-  constructor( props: any ) {
-    super( props );
+  constructor(props: any) {
+    super(props);
     this.state = {
-      date: '2022-5',
+      date: "2022-5",
       cards: [],
       stateProps: {
         date: "2022-05",
@@ -21,52 +28,51 @@ class ResetPassword extends React.Component<any, any> {
         used: 12533,
         availableTitle: "Competition Valid Treat Coins",
         available: 2533,
-      }
-    }
+      },
+    };
   }
 
   dateChange = (event: any) => {
-    this.setState({ date: event.target.value as string});
+    this.setState({ date: event.target.value as string });
   };
-
 
   fetchAssetData = async () => {
     const data: any = await getData();
 
-    this.setState({ cards: data.stateCard});
-    this.setState({ stateProps: data.stateProps});
+    this.setState({ cards: data.stateCard });
+    this.setState({ stateProps: data.stateProps });
   };
 
   componentDidMount() {
     this.fetchAssetData();
   }
 
-  componentDidUpdate (prevProps: any, prevState: any) {
-    if(prevState.date !== this.state.date)
-      this.setState({ 
+  componentDidUpdate(prevProps: any, prevState: any) {
+    if (prevState.date !== this.state.date)
+      this.setState({
         stateProps: {
-          ...this.state.stateProps, 
-          date: this.state.date
-        }
-      })
+          ...this.state.stateProps,
+          date: this.state.date,
+        },
+      });
   }
 
-  render(){
+  render() {
     return (
       <>
-        <Header overlap={false}/>
-        <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center"  display='flex' flexDirection='column' alignItems='center'>
+        <Header overlap={false} />
+        <Box bgcolor="black" sx={{ padding: "17px" }} textAlign="center" display="flex" flexDirection="column" alignItems="center">
           <Typography variant="h3" className="title" py={2} fontWeight="700" textAlign="center">
-            My Treat Coin Earnings
+            {content.reset_password_page_title}
           </Typography>
           <Typography mt={2} textAlign="center" fontWeight={400} color="white" variant="h6">
-            See all the actions that earned you Treat Coins and your current Treat Coin balance
+            {content.reset_password_page_description}
           </Typography>
           <Box display="flex" justifyContent="center" pt={4} pb={2}>
-            <FormControl 
-              sx={{ 
-                m: 1, 
-                textAlign: "center" 
+            <FormControl
+              sx={{
+                m: 1,
+                textAlign: "center",
               }}
             >
               <Select
@@ -77,7 +83,7 @@ class ResetPassword extends React.Component<any, any> {
                 inputProps={{
                   "aria-label": "Without label",
                   classes: {
-                    icon: 'select-icon',
+                    icon: "select-icon",
                   },
                 }}
                 SelectDisplayProps={{
@@ -90,7 +96,7 @@ class ResetPassword extends React.Component<any, any> {
               </Select>
             </FormControl>
           </Box>
-          <Box className='reset-password-content'>
+          <Box className="reset-password-content">
             {this.state.stateProps && <TreatState state={this.state.stateProps} />}
             <IconButton>
               <RefreshIcon sx={{ color: "white", padding: "14px" }} fontSize="large" />
@@ -104,6 +110,6 @@ class ResetPassword extends React.Component<any, any> {
       </>
     );
   }
-};
+}
 
 export default ResetPassword;
