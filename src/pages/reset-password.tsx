@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Select, Typography, MenuItem, IconButton, FormControl, OutlinedInput } from "@mui/material";
-import Header from "../components/Header";
-import TreatState from "../components/TreatState";
-import StateCard from "../components/StateCard";
+import Header from "../components/header";
+import TreatState from "../components/treat-state";
+import StateCard from "../components/state-card";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import Server from "../Server";
 
 const content = require("../content.json");

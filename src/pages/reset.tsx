@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Header from "../components/Header";
-import TreatState from "../components/TreatState";
-import Footer from "../components/Footer";
-import PayoutCard from "../components/PayoutCard";
-import Loading from "../components/Loading";
+import Header from "../components/header";
+import TreatState from "../components/treat-state";
+import Footer from "../components/footer";
+import PayoutCard from "../components/payout-card";
+import Loading from "../components/loading";
 import Server from "../Server";
 
 const content = require("../content.json");

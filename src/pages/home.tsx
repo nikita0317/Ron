@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import CookieCard from "../components/CookieCard";
-import Footer from "../components/Footer";
+import CookieCard from "../components/cookie-card";
+import Footer from "../components/footer";
 import React from "react";
 import JoinContainer from "../components/join-container";
 import TreatCoin from "../components/treatcoin-container";

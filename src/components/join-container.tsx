@@ -1,6 +1,6 @@
 import { Box, Button, Link, Paper, Typography } from "@mui/material";
 import React from "react";
-import Header from "./Header";
+import Header from "./header";
 
 const content = require('../content.json');
 

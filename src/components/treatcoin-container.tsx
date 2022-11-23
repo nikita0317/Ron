@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { ReactNode } from "react";
-import SwiperContainer from "./SwiperContainer";
+import SwiperContainer from "./swiper-container";
 
 class TreatCoin extends React.Component {
 

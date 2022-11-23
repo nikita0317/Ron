@@ -1,8 +1,8 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { ReactNode } from "react";
-import Loading from "./Loading";
-import Error from "./Error";
+import Loading from "./loading";
+import Error from './error';
 import Server from "../Server";
 
 const content = require("../content.json");
