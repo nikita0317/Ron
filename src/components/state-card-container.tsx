@@ -2,8 +2,8 @@ import React from "react";
 import TreatState from "./treat-state";
 import Server from "../Server";
 import { Box, FormControl, MenuItem, OutlinedInput, Select } from "@mui/material";
-import Loading from "./loading";
-import Error from "./error";
+import Loading from "./Loading";
+import Error from "./Error";
 
 const backendURLs = Server.backendURLs;
 const stateCardURL = backendURLs.stateCard;

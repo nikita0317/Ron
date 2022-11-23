@@ -1,8 +1,8 @@
 import React from "react";
 import Server from "../Server";
 import { Box } from "@mui/material";
-import Loading from "./loading";
-import Error from "./error";
+import Loading from "./Loading";
+import Error from "./Error";
 import StateCoinCard from "./state-card";
 
 const backendURLs = Server.backendURLs;
