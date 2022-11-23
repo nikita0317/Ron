@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 const content = require("../content.json");
 
-class StateCard extends React.Component <any, any>{
+class StateCoinCard extends React.Component <any, any>{
   render(): React.ReactNode {
     const { states } = this.props; 
     return (
@@ -64,4 +64,4 @@ class StateCard extends React.Component <any, any>{
   }
 };
 
-export default StateCard;
+export default StateCoinCard;
