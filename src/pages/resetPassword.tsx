@@ -6,7 +6,6 @@ import TreatState from "../components/TreatState";
 import StateCard from "../components/StateCard";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import Footer from "../components/Footer";
-import { getData } from "../utils/helpers";
 import Server from "../Server";
 
 const content = require("../content.json");

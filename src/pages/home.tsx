@@ -4,7 +4,6 @@ import CookieCard from "../components/CookieCard";
 import SwiperContainer from "../components/SwiperContainer";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import { getData } from "../utils/helpers";
 import Loading from "../components/Loading";
 import React from "react";
 import JoinContainer from "../components/join-container";
@@ -24,27 +23,6 @@ class Home extends React.Component<any, any> {
       isLoading: false,
     }
   }
-
-  // fetchAssetData = async () => {
-  //   this.setState({ isLoading: true });
-  //   const data: any = await getData();
-  //   setTimeout(()=> {
-  //     this.setState({ awardLists: data.awardLists });
-  //   }, 500)
-    
-  //   this.setState({ isLoading: false });
-  // };
-
-  // componentDidMount(){
-  //   this.fetchAssetData();
-  // }
-
-  // scrollToDiv = (text: string) => {
-  //   window.scrollTo({
-  //     top: document.getElementById(text)?.offsetTop,
-  //     behavior: "smooth", // for smoothly scrolling
-  //   });
-  // }
 
   render() {
     if( this.state.isLoading ) {

@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import TreatState from "../components/TreatState";
 import Footer from "../components/Footer";
 import PayoutCard from "../components/PayoutCard";
-import { getData } from "../utils/helpers";
 import Loading from "../components/Loading";
 import Server from "../Server";
 

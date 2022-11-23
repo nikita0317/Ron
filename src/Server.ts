@@ -17,6 +17,7 @@ const prizes = accessPoints.prizes;
 const awardLists = accessPoints.awardLists;
 const payoutCard = accessPoints.payoutCard;
 const stateCard = accessPoints.stateCard;
+const treatCoin = accessPoints.treatCoin;
 
 const backendURLS: any = {
   imagesPath: host + imagesPath,
@@ -24,7 +25,8 @@ const backendURLS: any = {
   top3Prizes: host + prizes,
   awardLists: host + awardLists,
   payoutCard: host + payoutCard,
-  stateCard: host + stateCard
+  stateCard: host + stateCard,
+  treatCoin: host + treatCoin
 }
 
 

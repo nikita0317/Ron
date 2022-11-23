@@ -7,7 +7,8 @@
     "prizes": "/guest/prizes",
     "awardLists": "/guest/awardLists",
     "payoutCard": "/guest/payoutCard",
-    "stateCard": "/guest/stateCard"
+    "stateCard": "/guest/stateCard",
+    "treatCoin": "/guest/treatCoin"
   },
   "response_codes": {
     "OK": 200,
