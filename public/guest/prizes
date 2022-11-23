@@ -1,0 +1,16 @@
+{
+  "prizes": [
+    {
+      "img": "/first3/2.png",
+      "title": "Motorcycle worth $3K"
+    },
+    {
+      "img": "/first3/1.png",
+      "title": "$4K"
+    },
+    {
+      "img": "/first3/3.png",
+      "title": "iPhone 14 worth $1.5K"
+    }
+  ]
+}

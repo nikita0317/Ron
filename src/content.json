@@ -2,5 +2,14 @@
   "join_description": "Earn big <b>cash</b> & win amazing <b>prizes</b> with Treat Coins you gain by referring your friends and completing <b>fun</b> activities...",
   "join_button": "Join TreatCoin",
   "tell_me_more": "Tell me more",
-  "see_all_offers": "See All Offers"
+  "see_all_offers": "See All Offers",
+  "total_coins_label": "Total Coins",
+  "prize_label": "Prize",
+  "my_payouts_label": "My payouts:",
+  "second_label": "2nd",
+  "third_label": "3rd",
+  "leader_board_title": "Leaderboards",
+  "leader_board_comment": "*Awards are delivered in money according to the sum shown next to it and in any way you choose to redeem it via Plum: cash, gift card, or a prepaid credit card (depending on what's available via Plum in your country and your voucher's sum).",
+  "reset_page_title": "My Treat Coin Earnings",
+  "reset_page_description": "See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance"
 }

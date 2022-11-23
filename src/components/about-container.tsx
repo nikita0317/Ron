@@ -1,8 +1,8 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { ReactNode } from "react";
-import Loading from "../components/Loading";
-import Error from "../components/Error";
+import Loading from "./Loading";
+import Error from "./Error";
 import Server from "../Server";
 
 const configuration = require("../configuration.json");
@@ -78,7 +78,6 @@ class About extends React.Component<any, any> {
                   <Box>
                     <img src={`images/about/${i + 1}.png`} />
                     <Typography variant="h5" color="#CB8F6D">
-                      {console.log(item.title)}
                       {item.title}
                     </Typography>
                     <Typography variant="body1" color="white">

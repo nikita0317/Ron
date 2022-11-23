@@ -1,0 +1,58 @@
+{
+  "awardLists": [
+    {
+      "id": 1,
+      "name": "PLAXX",
+      "coin": 5990,
+      "prize": "$4K"
+    },
+    {
+      "id": 2,
+      "name": "PLAXX",
+      "coin": 5980,
+      "prize": "Motorcycle worth $3K"
+    },
+    {
+      "id": 3,
+      "name": "PLAXX",
+      "coin": 5970,
+      "prize": "iPhone 14 worth $1.5K"
+    },
+    {
+      "id": 4,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    },
+    {
+      "id": 5,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    },
+    {
+      "id": 6,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    },
+    {
+      "id": 7,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    },
+    {
+      "id": 8,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    },
+    {
+      "id": 9,
+      "name": "BLAXX",
+      "coin": 5965,
+      "prize": 156
+    }
+  ]
+}

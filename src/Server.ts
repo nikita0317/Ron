@@ -13,10 +13,16 @@ const host = websiteConnection.frontend_host;
 
 const imagesPath = paths.images_path;
 const about = accessPoints.about;
+const prizes = accessPoints.prizes;
+const awardLists = accessPoints.awardLists;
+const payoutCard = accessPoints.payoutCard;
 
 const backendURLS: any = {
   imagesPath: host + imagesPath,
-  about: host + about
+  about: host + about,
+  top3Prizes: host + prizes,
+  awardLists: host + awardLists,
+  payoutCard: host + payoutCard
 }
 
 

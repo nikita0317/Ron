@@ -3,7 +3,10 @@
     "images_path": "/images"
   },
   "access_points": {
-    "about": "/guest/about"
+    "about": "/guest/about",
+    "prizes": "/guest/prizes",
+    "awardLists": "/guest/awardLists",
+    "payoutCard": "/guest/payoutCard"
   },
   "response_codes": {
     "OK": 200,
