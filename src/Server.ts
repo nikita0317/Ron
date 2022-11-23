@@ -1,8 +1,5 @@
-import React from "react";
-
 const configuration = require('./configuration.json');
 const globalConf = require('./variants/development/global_conf.json')
-const content = require('./content.json');
 
 const paths = configuration.paths;
 const accessPoints = configuration.access_points;
