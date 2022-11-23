@@ -11,41 +11,52 @@ import Server from "../Server";
 
 const content = require("../content.json");
 const backendURLs = Server.backendURLs;
-const payoutCardURL = backendURLs.payoutCard;
+const stateCardURL = backendURLs.stateCard;
 
 let tempComponent: any;
 
 class ResetPassword extends React.Component<any, any> {
+  loadURL: any;
+
   constructor(props: any) {
     super(props);
+    this.loadURL = stateCardURL;
     this.state = {
       date: "2022-5",
       cards: [],
-      stateProps: {
-        date: "2022-05",
-        state: "Total",
-        total: 155654,
-        used: 12533,
-        availableTitle: "Competition Valid Treat Coins",
-        available: 2533,
-      },
+      stateProps: null
     };
+    tempComponent = this;
+  }
+
+  componentDidMount() {
+    fetch(this.loadURL, {
+      method: "get",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(async function (res) {
+      if (res.status !== Server.responseCodes.OK) {
+        tempComponent.setState({
+          error: true,
+          isLoading: false,
+        });
+      } else {
+        let result = await res.json();
+        console.log("stateCards = ", result);
+        tempComponent.setState({
+          error: null,
+          isLoading: false,
+          cards: result.stateCards,
+          stateProps: result.stateProps
+        });
+      }
+    });
   }
 
   dateChange = (event: any) => {
     this.setState({ date: event.target.value as string });
   };
-
-  fetchAssetData = async () => {
-    const data: any = await getData();
-
-    this.setState({ cards: data.stateCard });
-    this.setState({ stateProps: data.stateProps });
-  };
-
-  componentDidMount() {
-    this.fetchAssetData();
-  }
 
   componentDidUpdate(prevProps: any, prevState: any) {
     if (prevState.date !== this.state.date)
@@ -102,7 +113,7 @@ class ResetPassword extends React.Component<any, any> {
               <RefreshIcon sx={{ color: "white", padding: "14px" }} fontSize="large" />
             </IconButton>
             {this.state.cards.map((card: any, index: any) => (
-              <StateCard key={index} content={card} />
+              <StateCard key={index} states={card} />
             ))}
           </Box>
           <Footer />

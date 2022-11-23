@@ -1,0 +1,47 @@
+{
+  "stateCards": [
+    {
+      "logo": "client-logo1",
+      "bgCol": "#a0699b",
+      "coin": 2560,
+      "subtitle": "worth $500 Apple Watch",
+      "state": "Usable",
+      "description": "For finishing at #24 place in ‘Maze competition’",
+      "datetime": "05/08/2022 11:53:32 pm"
+    },
+    {
+      "logo": "client-logo2",
+      "bgCol": "#a1858e",
+      "coin": 80,
+      "state": "Usable & Competition",
+      "description": "Opened a free account",
+      "datetime": "05/08/2022 11:53:32 pm",
+      "more": 2,
+      "link": "/"
+    },
+    {
+      "logo": "client-logo3",
+      "bgCol": "#9f9eba",
+      "coin": 50,
+      "state": "Competition",
+      "description": "Opened a free account",
+      "datetime": "05/08/2022 11:53:32 pm"
+    },
+    {
+      "logo": "client-logo4",
+      "bgCol": "#6b9283",
+      "coin": 250,
+      "state": "Usable",
+      "description": "{{Referral}} gifted a Rookie",
+      "datetime": "05/08/2022 11:53:32 pm"
+    }
+  ],
+  "stateProps": {
+    "date": "2022-05",
+    "state": "Total",
+    "total": 155654,
+    "used": 12533,
+    "availableTitle": "Competition Valid Treat Coins",
+    "available": 2533
+  }
+}

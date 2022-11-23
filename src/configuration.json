@@ -6,7 +6,8 @@
     "about": "/guest/about",
     "prizes": "/guest/prizes",
     "awardLists": "/guest/awardLists",
-    "payoutCard": "/guest/payoutCard"
+    "payoutCard": "/guest/payoutCard",
+    "stateCard": "/guest/stateCard"
   },
   "response_codes": {
     "OK": 200,

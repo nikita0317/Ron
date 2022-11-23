@@ -383,6 +383,12 @@ body {
     margin-bottom: 24px;
 }
 
+.state-card-link {
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
  /* 
     Reset  
  */

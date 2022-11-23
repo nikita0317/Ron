@@ -16,13 +16,15 @@ const about = accessPoints.about;
 const prizes = accessPoints.prizes;
 const awardLists = accessPoints.awardLists;
 const payoutCard = accessPoints.payoutCard;
+const stateCard = accessPoints.stateCard;
 
 const backendURLS: any = {
   imagesPath: host + imagesPath,
   about: host + about,
   top3Prizes: host + prizes,
   awardLists: host + awardLists,
-  payoutCard: host + payoutCard
+  payoutCard: host + payoutCard,
+  stateCard: host + stateCard
 }
 
 
