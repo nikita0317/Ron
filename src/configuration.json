@@ -5,10 +5,10 @@
   "access_points": {
     "about": "/guest/about",
     "prizes": "/guest/prizes",
-    "awardLists": "/guest/awardLists",
-    "payoutCard": "/guest/payoutCard",
-    "stateCard": "/guest/stateCard",
-    "treatCoin": "/guest/treatCoin"
+    "awardLists": "/guest/award-lists",
+    "payoutCard": "/guest/payout-card",
+    "stateCard": "/guest/state-card",
+    "treatCoin": "/guest/treat-coin"
   },
   "response_codes": {
     "OK": 200,
