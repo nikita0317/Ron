@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 
 import { FreeMode, Pagination } from "swiper";
 import { Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Server from "../Server";
 
 const content = require("../content.json");
@@ -95,7 +95,7 @@ class SwiperContainer extends React.Component <any, any> {
                   }}
                 >
                   {item.toLocaleString("en-US")}
-                  <sub style={{ fontSize: "14px" }}>TC</sub>
+                  <sub style={{ fontSize: "14px" }}>{content.tc_label}</sub>
                 </Typography>
               </SwiperSlide>
             );

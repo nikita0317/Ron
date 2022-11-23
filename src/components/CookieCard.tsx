@@ -1,7 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import CookieConsent from "react-cookie-consent";
-import { makeStyles } from "@mui/styles";
-import { classicNameResolver } from "typescript";
 import React from "react";
 
 class CookieCard extends React.Component {

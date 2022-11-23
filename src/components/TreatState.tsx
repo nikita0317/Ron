@@ -1,28 +1,10 @@
-import { FC } from 'react';
 import { Box, Typography } from "@mui/material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import Server from "../Server";
 import React from 'react';
 
 const content = require("../content.json");
-const backendURLs = Server.backendURLs;
-const payoutCardURL = backendURLs.payoutCard;
 
-type StateProps = {
-  state: {
-    date?: string,
-    state: string,
-    total: number,
-    used: number,
-    availableTitle: string,
-    available: number
-  }
-}
 class TreatState extends React.Component <any, any>{
-  constructor( props: StateProps) {
-    super( props );
-  }
-
   getMonthName(monthNumber: number) {
     const date = new Date();
     date.setMonth(monthNumber - 1);

@@ -1,16 +1,7 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
 import React from "react";
-import { FC } from "react";
-
-type footerProps = {
-  list?: boolean;
-};
 
 class Footer extends React.Component<any, any> {
-  constructor(props: footerProps){
-    super( props );
-  }
-
   render(){
     return (
       <Box className="footer">

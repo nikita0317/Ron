@@ -5,10 +5,7 @@ import Header from "./Header";
 const content = require('../content.json');
 
 class JoinContainer extends React.Component {
-  constructor( props: any ) {
-    super( props );
-  }
-  
+
   scrollToDiv = (text: string) => {
     window.scrollTo({
       top: document.getElementById(text)?.offsetTop,

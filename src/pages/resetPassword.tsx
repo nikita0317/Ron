@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Box, Select, Theme, Typography, MenuItem, IconButton, FormControl, OutlinedInput, useTheme, useMediaQuery } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import React from "react";
+import { Box, Select, Typography, MenuItem, IconButton, FormControl, OutlinedInput } from "@mui/material";
 import Header from "../components/Header";
 import TreatState from "../components/TreatState";
 import StateCard from "../components/StateCard";

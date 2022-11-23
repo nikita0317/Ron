@@ -5,9 +5,7 @@ import Loading from "./Loading";
 import Error from "./Error";
 import Server from "../Server";
 
-const configuration = require("../configuration.json");
 const content = require("../content.json");
-
 const backendURLs = Server.backendURLs;
 const aboutURL = backendURLs.about;
 
@@ -76,7 +74,7 @@ class About extends React.Component<any, any> {
               return (
                 <Grid item xs={12} sm={6} md={3} key={i}>
                   <Box>
-                    <img src={`images/about/${i + 1}.png`} />
+                    <img src={`images/about/${i + 1}.png`} alt={`About_image ${i+1}`} />
                     <Typography variant="h5" color="#CB8F6D">
                       {item.title}
                     </Typography>

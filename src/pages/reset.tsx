@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Box, Theme, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import React from "react";
+import { Box, Typography } from "@mui/material";
 import Header from "../components/Header";
 import TreatState from "../components/TreatState";
 import Footer from "../components/Footer";

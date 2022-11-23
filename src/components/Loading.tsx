@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import * as LoadingSpinner from '../../public/lottie/loading.json';
 
 const Loading = () => {
   return (

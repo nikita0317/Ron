@@ -93,7 +93,7 @@ class LeaderBoard extends React.Component<any, any> {
           <Paper elevation={15} className="award-lists">
             <Box className="award-lists-content">
               {awardLists.map((item: any, i: any) => {
-                if (i > 2)
+                if (i > 2) {
                   return (
                     <Box key={i}>
                       <Box className="award-lists-item">
@@ -123,6 +123,9 @@ class LeaderBoard extends React.Component<any, any> {
                       <Divider />
                     </Box>
                   );
+                } else {
+                  return <></>;
+                }
               })}
             </Box>
           </Paper>

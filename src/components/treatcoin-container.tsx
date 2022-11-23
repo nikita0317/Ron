@@ -4,9 +4,6 @@ import { ReactNode } from "react";
 import SwiperContainer from "./SwiperContainer";
 
 class TreatCoin extends React.Component {
-  constructor( props: any) {
-    super( props );
-  }
 
   render(): ReactNode {
     return (

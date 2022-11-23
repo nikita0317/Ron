@@ -1,26 +1,9 @@
 import React from "react";
-import { Box, Theme, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 const content = require("../content.json");
 
-type CardProps = {
-  states: {
-    logo: string;
-    bgCol: string;
-    coin: number;
-    subtitle?: string;
-    state: string;
-    description: string;
-    datetime: string;
-    more?: number;
-    link?: string;
-  };
-};
-
 class StateCard extends React.Component <any, any>{
-  constructor( props: CardProps ){
-    super( props );
-  }
   render(): React.ReactNode {
     const { states } = this.props; 
     return (
