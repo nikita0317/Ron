@@ -18,5 +18,23 @@
   "reset_page_description": "See all your Treat Coin withdrawals, NFT purchases, competition wins and your Usable Treat Coin balance",
   "reset_password_page_title": "My Treat Coin Earnings",
   "reset_password_page_description": "See all the actions that earned you Treat Coins and your current Treat Coin balance",
-  "more_offers_from_this_brand_label": "more offers from this brand"
+  "more_offers_from_this_brand_label": "more offers from this brand",
+  "description": [
+    {
+      "title": "Meet Treat Coin",
+      "content": "Treat Coin is our virtual currency that’s worth money. The more Treat Coins you gain, the more they will earn back for you."
+    },
+    {
+      "title": "Gain Treat Coins",
+      "content": "Build your team of referrals and gain Treat Coins for every 1st & 2nd gen sign up and for every fun activity you or your team members complete."
+    },
+    {
+      "title": "Use Your TreatCoins",
+      "content": "Use the Treat Coins you gain to convert them to cash, gift cards, cryptocurrency or use them to get NFTs in our coming soon virtual market."
+    },
+    {
+      "title": "Big Prizes Every Month",
+      "content": "Every month the Top 100 TreatCoin gainers win amazing prizes. Each Treat Coin you gain counts - even if you cashed it!"
+    }
+  ]
 }
